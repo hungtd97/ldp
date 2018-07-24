@@ -155,7 +155,7 @@ body{
     background-size: 200% 100%;
     background-position:right bottom;
     margin-left:10px;
-    transition:all 1.5s ease;
+    transition:all 0.5s ease;
 }
 
 .content-1 .button button:hover{
@@ -231,20 +231,17 @@ body{
 }
 
 .container-3 .slides-item .image{
-	background: #fdd641;
-	border-radius: 50%;
 	width: 150px;
 	height: 150px;
 	text-align: center;
 }
 
 .container-3 .slides-item .image img{
-	width: 50%;
+	width: 100%;
     margin: auto;
     top:0;
     bottom: 0;
-    vertical-align: middle;
-    padding-top: 30px;	
+    vertical-align: middle;	
 }
 
 .container-3 .box-slides .slick-button{
@@ -263,17 +260,27 @@ body{
 }
 
 .container-3 .slides-item .arrow{
-	background: url("../images/8.gif");
-	width: 26px;
-	height: 25px;
-	bottom: 0;
-	position: absolute;
+	    margin-top: 15px;
+    position: absolute;
+    width: 15%;
+    bottom: 15px;
+    height: 2px;
+    background: #5bbc2e;
+    -webkit-transition: width .2s ease-out;
+    -o-transition: width .2s ease-out;
+    transition: width .2s ease-out;
 }
 
-.container-3 .slides .slick-center .arrow{
-	background: url("../images/9.gif");
-	width: 170px;
-	height: 25px;
+.container-3 .slides-item .arrow:before{
+	content: '';
+    display: block;
+    position: absolute;
+    right: -8px;
+    top: -3px;
+    border: 4px solid #5bbc2e;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
 }
 
 .slides{
@@ -404,7 +411,7 @@ body{
     background-size: 200% 100%;
     background-position:right bottom;
     margin-left:10px;
-    transition:all 1.5s ease;
+    transition:all 0.5s ease;
 }
 .content-box .form-group button:hover{
 	background-position: left bottom;
@@ -781,12 +788,27 @@ body{
 }
 
 .slides-2 .slick-slide .arrow{
-	background: url("../images/8.gif");
-	width: 26px;
-	height: 25px;
-	right: 20px;
-	bottom: 0;
-	position: absolute;
+	    margin-top: 15px;
+    position: absolute;
+    width: 5%;
+    bottom: 15px;
+    height: 2px;
+    background: #5bbc2e;
+    -webkit-transition: width .2s ease-out;
+    -o-transition: width .2s ease-out;
+    transition: width .2s ease-out;
+}
+
+.slides-2 .slick-slide .arrow:before{
+	content: '';
+    display: block;
+    position: absolute;
+    right: -8px;
+    top: -3px;
+    border: 4px solid #5bbc2e;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
 }
 
 .slides-2 .slides-item .image{
@@ -801,6 +823,7 @@ body{
 	border-bottom-right-radius: 9px;
 	border-top-right-radius: 9px;
 	border-top-left-radius: 9px;
+	transition: .3s all ease;
 }
 
 .slides-2 .slides-item .content{
@@ -903,9 +926,16 @@ body{
 	margin-bottom: 50px;
 }
 
+.slides-item {
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
 
 .container-9 .slides-4 .slides-item .line-1{
-	font-size: 24px;
+	font-size: 20px;
 }
 
 .container-9 .slides-4 .slides-item .line-2{
