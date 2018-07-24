@@ -37,13 +37,14 @@ $(document).ready(function(){
 		 arrows: false,
 		 centerMode: true,
 		 centerPadding: '0',
+		 draggable: true,
 		 responsive: [
 		 	{
 		 		 breakpoint: 1024,
 			      settings: {
 			        slidesToShow: 2,
 			        slidesToScroll: 2,
-     		}
+     			}
 		 	}
 		 ]
 		  
@@ -57,11 +58,29 @@ $(document).ready(function(){
 
 	$('.slides .slides-item').mouseout(function(){
 		$(this).find('.title').css('color', '#000');
+		$(this).find('.arrow').css({
+			'width': '15%',
+		});
 	});
 
 	$('.slides .slides-item').mouseover(function(){
 		$(this).find('.title').css('color', '#5bbc2e');
-		$(this).find('.arrow')
+		$(this).find('.arrow').css({
+			'width': '60%',
+		});
+	});
+	$('.slides-2 .slides-item').mouseout(function(){
+		$(this).find('img').css('box-shadow' ,'none');
+		$(this).find('.arrow').css({
+			'width': '5%',
+		});
+	});
+
+	$('.slides-2 .slides-item').mouseover(function(){
+		$(this).find('img').css('box-shadow' ,'10px 7px 20px rgba(0, 0, 0, 0.6)');
+		$(this).find('.arrow').css({
+			'width': '30%',
+		});
 	});
 
 	
@@ -92,6 +111,7 @@ $(document).ready(function(){
 		  autoplaySpeed: 3000,
 		 arrows: false,
 		 centerMode: true,
+		 draggable:true,
 		 centerPadding: '0',
 		responsive: [
 				 	{
@@ -128,6 +148,7 @@ $(document).ready(function(){
 		  asNavFor: '.slides-3',
 		  centerPadding: '0',
 		  centerMode: true,
+		  draggable:true,
 		  focusOnSelect: true,
 		  arrows:false,
 		  infinite:true
